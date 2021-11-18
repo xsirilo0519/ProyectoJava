@@ -6,6 +6,7 @@ import Ejercicio_5.mainEjercicio5;
 import Ejercicio_6.mainEjercicio6;
 import Ejercicio_7.mainEjercicio7;
 import Ejercicio_8.mainEjercicio8;
+import Ejercicio_9.mainEjercicio9;
 import Utilidades.Utils;
 
 public class Main {
@@ -43,6 +44,9 @@ public class Main {
                     break;
                 case 8:
                     mainEjercicio8 E8=new mainEjercicio8(util);
+                    break;
+                case 9:
+                    mainEjercicio9 E9=new mainEjercicio9(util);
                     break;
             }
         }while(opcion!=0);

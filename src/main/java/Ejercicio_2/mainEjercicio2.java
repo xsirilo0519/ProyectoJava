@@ -4,7 +4,7 @@ import Utilidades.Utils;
 
 public class mainEjercicio2 {
     public mainEjercicio2(Utils util){
-
+        util.showMessage("Comparar numeros");
         int primerNum=util.inputIntMessage("Ingrese un numero");
         int segundoNum=util.inputIntMessage("Ingrese otro numero");
         if (primerNum==segundoNum){

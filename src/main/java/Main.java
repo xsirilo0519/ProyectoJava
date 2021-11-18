@@ -1,5 +1,6 @@
 import Ejercicio_1.mainEjercicio1;
 import Ejercicio_2.mainEjercicio2;
+import Ejercicio_3.mainEjercicio3;
 import Utilidades.Utils;
 
 public class Main {
@@ -19,6 +20,9 @@ public class Main {
                     break;
                 case 2:
                     mainEjercicio2 E2=new mainEjercicio2(util);
+                    break;
+                case 3:
+                    mainEjercicio3 E3=new mainEjercicio3(util);
                     break;
             }
         }while(opcion!=0);

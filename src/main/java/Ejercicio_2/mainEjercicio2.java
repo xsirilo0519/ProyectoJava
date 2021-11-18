@@ -5,8 +5,8 @@ import Utilidades.Utils;
 public class mainEjercicio2 {
     public mainEjercicio2(Utils util){
 
-        int primerNum=2;
-        int segundoNum=5;
+        int primerNum=util.inputIntMessage("Ingrese un numero");
+        int segundoNum=util.inputIntMessage("Ingrese otro numero");
         if (primerNum==segundoNum){
             util.showMessage("Los numeros "+primerNum+" y "+segundoNum+" son iguales.");
         }else if(primerNum<segundoNum){

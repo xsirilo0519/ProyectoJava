@@ -38,7 +38,10 @@ public class Utils {
         do{
             try {
                 cadena=JOptionPane.showInputDialog(message);
-                loop=false;
+                if (cadena==null||cadena.isEmpty())
+                    loop=true;
+                else
+                    loop=false;
             }catch(Exception e){
                 showMessage("Ingrese una cadena");
             }

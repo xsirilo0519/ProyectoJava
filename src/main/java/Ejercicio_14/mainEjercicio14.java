@@ -11,6 +11,7 @@ public class mainEjercicio14 {
             System.out.print(numero+" ");
             numero+=2;
         }
+        System.out.print("\n");
         util.showMessage("Los numeros se imprimieron por consola");
     }
 }

@@ -49,6 +49,23 @@ public class Utils {
         }while(loop);
         return cadena;
     }
+    public char inputCharMessage(String message){
+        boolean loop=true;
+        char charText=' ';
+        do{
+            try {
+                charText= JOptionPane.showInputDialog(message).charAt(0);
+                if (charText==' ')
+                    loop=true;
+                else
+                    loop=false;
+            }catch(Exception e){
+                showMessage("Ingrese una char");
+            }
+
+        }while(loop);
+        return charText;
+    }
     public void showMessage(String message){
         JOptionPane.showMessageDialog(null,message);
     }

@@ -4,6 +4,7 @@ import Ejercicio_11.mainEjercicio11;
 import Ejercicio_12.mainEjercicio12;
 import Ejercicio_13.mainEjercicio13;
 import Ejercicio_14.mainEjercicio14;
+import Ejercicio_15.mainEjercicio15;
 import Ejercicio_2.mainEjercicio2;
 import Ejercicio_3.mainEjercicio3;
 import Ejercicio_4.mainEjercicio4;
@@ -67,6 +68,9 @@ public class Main {
                     break;
                 case 14:
                     mainEjercicio14 E14=new mainEjercicio14(util);
+                    break;
+                case 15:
+                    mainEjercicio15 E15=new mainEjercicio15(util);
                     break;
             }
         }while(opcion!=0);

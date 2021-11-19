@@ -5,15 +5,28 @@ import jdk.swing.interop.SwingInterOpUtils;
 import java.util.Random;
 
 public class Persona {
-    private String nombre="";
-    private int edad=0;
+    private final String nombreD="";
+    private final int edadD=0;
+    private final char sexoD='H';
+    private final double pesoD=0;
+    private final double alturaD=0;
+    private final int sobrePeso=1;
+    private final int pesoIdeal=-1;
+    private final int debajoIdeal=0;
+    private String nombre;
+    private int edad;
     private String DNI;
-    private char sexo='H';
-    private double peso=0;
-    private double altura=0;
+    private char sexo;
+    private double peso;
+    private double altura;
     private String[] letrasDNI = new String[]{"T","R","W","A","G","M","Y","F","P","D","X","B","N","J","Z","S","Q","V","H","L","C","K","E"};
 
     public Persona() {
+        this.nombre = this.nombreD;
+        this.edad = this.edadD;
+        this.sexo=this.sexoD;
+        this.peso = this.pesoD;
+        this.altura = this.alturaD;
         generarDNI();
     }
 
@@ -21,6 +34,8 @@ public class Persona {
         this.nombre = nombre;
         this.edad = edad;
         this.sexo=sexo;
+        this.peso = this.pesoD;
+        this.altura = this.alturaD;
         comprobarSexo(this.sexo);
         generarDNI();
     }
@@ -59,11 +74,11 @@ public class Persona {
     public int calcularIMC(){
         double IMC=this.peso/(Math.pow(this.altura,2));
         if (IMC<20){
-            return -1;
+            return this.pesoIdeal;
         }else if(IMC>=20 && IMC<=25){
-            return 0;
+            return this.debajoIdeal;
         }
-        return 1;
+        return this.sobrePeso;
     }
 
     public boolean esMayorDeEdad(){
@@ -75,10 +90,11 @@ public class Persona {
 
 
     private void comprobarSexo(char sexo){
-        if (sexo=='M'||sexo=='H'){
-            this.sexo=sexo;
+        char sexoUpp=Character.toUpperCase(sexo);
+        if (sexoUpp=='M'||sexoUpp=='H'){
+            this.sexo=sexoUpp;
         }else{
-            this.sexo='H';
+            this.sexo=this.sexoD;
         }
     }
 
